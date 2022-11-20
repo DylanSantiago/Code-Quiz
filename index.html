@@ -12,29 +12,36 @@
     <div>
         <a href="#">High Scores</a>  
     </div>
-    <div>
-        <h2>Seconds Left:>0</h2> 
+    <div id="seconds">
+        <h2>Seconds Left:<span id="time-left">0</span></h2> 
     </div>
   </header>
     <main>
-        <section>
+        <section id="start">
             <h1>Code Quiz</h1>
             <h2>Test your knowledge and see how much you have learned!</h2>
-            <button>Start</button>
+            <button id="startBtn">Start</button>
         </section>
-        <section>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <section id="options" class="hide">
+            <ul id="questionList">
+                <li><button class="inline" id="answerA"></button></li>
+                <li><button class="inline" id="answerB"></button></li>
+                <li><button class="inline" id="answerC"></button></li>
+                <li><button class="inline" id="answerD"></button></li>
+                <h4 id="answers" class="hide"></h4>
             </ul>
         </section>
-        <section>
-            <h1>Score:</h1>
+        <section class="hide" id="viewScore">
+            <h1>Score: <span id="score"></span></h1>
+            <div>
+                <p>Username <input id="userName"><button id="submitBtn">Enter Score</button></p>
+            </div>
         </section>
-        <section>
+        <section class ="hide" id ="scoresPage">
             <h1>High Scores</h1>
+            <div id="newScores">
+
+            </div>
         </section>
     </main>
     <script src="./assets/js/script.js"></script>

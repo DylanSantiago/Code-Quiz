@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>CHALLENGE 4: POP QUIZ</title>
 </head>
+
 <body>
-    
+  <header>
+    <div>
+        <a href="#" id="prevScores">Previous Scores</a>  
+    </div>
+    <div class="secondsLeft" id="seconds">
+        <h2>Seconds Left:<span id="countdown">0</span></h2> 
+    </div>
+  </header>
+    <main>
+    <section id="start">
+        <h1 class="beginning-text">Pop Quiz</h1>
+        <h1 class="beginning-text">Can you pass this Coding Quiz? 🤔</h1>
+        <p>The hardest quiz you will take to see if you are on path to being a developer!</p>
+        <p>You have 60 seconds. Good luck and try not to get any wrong 🙌</p>
+        <button id="startButton">Start</button>
+    </section>
+    <section id="answers" class="hide">
+        <ul id="questions" class="question"></ul>
+            <li><button class ="inline" id="answer1"></button></li>
+            <li><button class ="inline" id="answer2"></button></li>
+            <li><button class ="inline" id="answer3"></button></li>
+            <li><button class ="inline" id="answer4"></button></li>
+            <h3 id="result" class="hide"></h3>
+    </section>
+    <section class="hide" id="scoreView">
+        <h1>Score: <span id="finalScore"></span></h1>
+        <div>
+            <p>Username <input id="userName"><button id="submitButton">Log Score</button></p>
+        </div>
+    </section>
+    <section class="hide" id="prevScoresPage">
+        <h1>High Scores</h1>
+        <div id="newScores"></div>
+        <button id="returnButton" type="submit">Return</button>
+        </p>
+    </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

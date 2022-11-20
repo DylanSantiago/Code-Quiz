@@ -129,10 +129,10 @@ function quizOver() {
 }
 
 submitBtn.addEventListener("click", function (event) { 
-    savedScores(event); 
+    saveScore(event); 
 });
 
-var leaderBoard = localStorage.getItem("Leaderboard")
+var leaderBoard = localStorage.getItem("leaderboard")
 var storedScore= JSON.parse(leaderBoard);
 
 function saveScore(event) {
@@ -158,21 +158,20 @@ function saveScore(event) {
     scoreArray.push(userInput);
 
     var storeScore = JSON.stringify(scoreArray);
-    window.localStorage.setItem("Leadeboards", storeScore);
+    window.localStorage.setItem("leadeboard", storeScore);
 
     seeScores();
 }
 
 submitBtn.addEventListener("click", function (event) { 
-    savedScores(event); 
+    saveScore(event); 
 });
 
-var i = 0;
 
 function seeScores() {
     start.style.display = "none";
     scoresPage.style.display = "block";
-    scoreView.style.display = "none";
+    viewScore.style.display = "none";
 
     if (storedScore === null) {
         return;

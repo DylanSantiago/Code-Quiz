@@ -23,25 +23,24 @@
             <button id="startBtn">Start</button>
         </section>
         <section id="options" class="hide">
-            <ul id="questionList">
-                <li><button class="inline" id="answerA"></button></li>
-                <li><button class="inline" id="answerB"></button></li>
-                <li><button class="inline" id="answerC"></button></li>
-                <li><button class="inline" id="answerD"></button></li>
+            <ul id="questionList"></ul>
+                <p><button class="inline" id="answerA"></button></p>
+                <p><button class="inline" id="answerB"></button></p>
+                <p><button class="inline" id="answerC"></button></p>
+                <p><button class="inline" id="answerD"></button></p>
                 <h4 id="answers" class="hide"></h4>
-            </ul>
         </section>
         <section class="hide" id="viewScore">
             <h1>Score: <span id="score"></span></h1>
-            <div>
-                <p>Username <input id="userName"><button id="submitBtn">Enter Score</button></p>
-            </div>
+            <form>
+                <p>Username <input id="userName" type="text"><button type="submit" id="submitBtn">Enter Score</button></p>
+            </form>
         </section>
         <section class ="hide" id ="scoresPage">
             <h1>High Scores</h1>
-            <div id="newScores">
-
-            </div>
+            <div id="newScores"></div>
+            <p id ="allScores"></p>
+            <p id ="leaderboard"></p>
         </section>
     </main>
     <script src="./assets/js/script.js"></script>

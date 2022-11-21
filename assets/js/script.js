@@ -27,6 +27,7 @@ var questions = [
     },
 ]
 
+// Global Variables
 var allScores = document.getElementById("allScores");
 var seconds = document.getElementById("seconds");
 var timeLeft = document.getElementById("time-left");
@@ -45,8 +46,6 @@ var submitBtn = document.getElementById("submitBtn");
 var userName = document.getElementById("userName");
 var scoresPage = document.getElementById("scoresPage");
 var newScores = document.getElementById("newScores");
-var returnButton = document.getElementById("returnButton")
-
 var quizArray;
 var secondsLeft;
 var amountCorrect = 0;
@@ -54,6 +53,8 @@ var leaderBoard = localStorage.getItem("leaderboard")
 var storedScore= JSON.parse(leaderBoard);
 var i = 0;
 
+
+// Function that starts timer and begins quiz
 function startQuiz() {
 
     quizArray = 0;
@@ -78,6 +79,7 @@ function startQuiz() {
     }, 1000);
 };
 
+// Function that cycles through questions
 function questionLoop() {
     questionList.textContent = questions[quizArray].question;
     answerA.textContent = questions[quizArray].answers[0];
@@ -86,6 +88,7 @@ function questionLoop() {
     answerD.textContent = questions[quizArray].answers[3];
 };
 
+// Function that keeps track of right and wrong answers. Will subtract time if answer is incorrect. 
 function correctChoice(correctAnswer) {
     selectAnswer.style.display ="block";
     if (questions[quizArray].correctAnswer === correctAnswer) {
@@ -104,6 +107,7 @@ function correctChoice(correctAnswer) {
     }
 };
 
+// Function that makes references to the questions array showing which answers are correct
 function choiceA() { 
     correctChoice(0); 
 };
@@ -117,11 +121,7 @@ function choiceD() {
     correctChoice(3); 
 };
 
-answerA.addEventListener("click", choiceA);
-answerB.addEventListener("click", choiceB);
-answerC.addEventListener("click", choiceC);
-answerD.addEventListener("click", choiceD);
-
+// Once quiz ends, your score is displayed as well after highscores
 function quizOver() {
     options.style.display = "none";
     start.style.display = "none";
@@ -131,6 +131,7 @@ function quizOver() {
     score.textContent = amountCorrect * 20;
 }
 
+// Function that will save your score to the leaderboards showing all scores that were logged.
 function saveScore(event) {
     event.preventDefault();
     if (userName.value === "") {
@@ -159,6 +160,7 @@ function saveScore(event) {
     seeScores();
 }
 
+// Function to view high score page
 function seeScores() {
     start.style.display = "none";
     scoresPage.style.display = "block";
@@ -188,3 +190,8 @@ startBtn.addEventListener('click', startQuiz);
 submitBtn.addEventListener("click", function (event) { 
     saveScore(event); 
 });
+
+answerA.addEventListener("click", choiceA);
+answerB.addEventListener("click", choiceB);
+answerC.addEventListener("click", choiceC);
+answerD.addEventListener("click", choiceD);

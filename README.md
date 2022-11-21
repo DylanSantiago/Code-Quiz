@@ -20,4 +20,4 @@ After installation, click the start button and you will be faced with 5 question
 (Developing)
 
 ## Deployed Link
-(developing)
+[Deployed Link](https://dylansantiago.github.io/Code-Quiz/)

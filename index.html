@@ -10,7 +10,7 @@
 <body>
   <header>
     <div>
-        <a href="#">High Scores</a>  
+        <a href="#" id="allScores">High Scores</a>  
     </div>
     <div id="seconds">
         <h2>Seconds Left:<span id="time-left">0</span></h2> 
@@ -23,7 +23,7 @@
             <button id="startBtn">Start</button>
         </section>
         <section id="options" class="hide">
-            <ul id="questionList"></ul>
+            <h2 id="questionList"></h2>
                 <p><button class="inline" id="answerA"></button></p>
                 <p><button class="inline" id="answerB"></button></p>
                 <p><button class="inline" id="answerC"></button></p>
@@ -32,17 +32,15 @@
         </section>
         <section class="hide" id="viewScore">
             <h1>Score: <span id="score"></span></h1>
-            <form>
+            <form class="form">
                 <p>Username <input id="userName" type="text"><button type="submit" id="submitBtn">Enter Score</button></p>
             </form>
         </section>
         <section class ="hide" id ="scoresPage">
             <h1>High Scores</h1>
-            <div id="newScores"></div>
-            <p>
-                <button id="returnButton" type="submit">Return</button>
-            </p>
-        </section>
+            <p id="newScores"></p>
+            <p id ="allScores"></p>
+            <p id ="viewScore"></p>
     </main>
     <script src="./assets/js/script.js"></script>
 </body>

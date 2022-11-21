@@ -5,3 +5,32 @@
 .inline{
     display: inline;
 }
+
+body {
+    background-color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    flex-direction: column;
+    display: flex;
+}
+
+main {
+    text-align: center;
+    padding: 10%;
+}
+
+a {
+    text-align: left;
+    font-size: 25px;
+}
+
+button {
+    font-size: 25px;
+}
+
+.form {
+    font-size: 20px;
+}
+
+section {
+    border:10px;
+}

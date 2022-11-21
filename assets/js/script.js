@@ -109,6 +109,7 @@ function correctChoice(correctAnswer) {
         amountCorrect++;
         selectAnswer.textContent ="Correct!"
     } else {
+        secondsLeft -= 15;
         timeLeft.textContent = secondsLeft;
         selectAnswer.textContent ="Incorrect"
     }
@@ -123,9 +124,10 @@ function correctChoice(correctAnswer) {
 function quizOver() {
     options.style.display = "none";
     start.style.display = "none";
+    timeLeft.style.display ="none";
     viewScore.style.display = "block";
     allScores.style.display = "block";
-    score.textContent = amountCorrect;
+    score.textContent = amountCorrect * 20;
 }
 
 submitBtn.addEventListener("click", function (event) { 
